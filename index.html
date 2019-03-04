@@ -1,94 +1,121 @@
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.amber-pink.min.css" />
-<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-<center><div class = "log">
-<h1 id = "heading">Rescuer</h1>
-<center>
-<form action="#">
-  <div class="insert mdl-textfield mdl-js-textfield textfield-demo">
-  
-		<input class="mdl-textfield__input" type="text" id="sample1" />
-    <label class="mdl-textfield__label" for="sample1" id= "atext">Enter ID</label><br>
-	  <p> Developed by Refath AKA Harvard</p>
-  </div>
-	</form>
-	</center>
-	  <a class="checkbutton btn-floating btn-large waves-effect waves-light lightblue"><i class="material-icons">check
-</i></a>
+<div class = "container">
+	<div class = "box item1">
+	<div class = "logoCircle"></div>
 	</div>
-	</center>
-<br><br><br><br><br>
+	<div class = "box item2">
+		<div class="slick-carousel">
+			<div><div class="slide-content">Rescuer serves to prevent drug overdoses. </div></div>
+			<div><div class="slide-content">Whether you OD yourself, or discover an OD'ed person, Rescuer will supply with the options to resolve the issue. </div></div>
+			<div><div class="slide-content">Log in so we can find out more about you.</div>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
 
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      }
+    </script>
+			</div>
+		</div>
+	</div>
+</div>
 
-<!--**<img src = "http://www.thewaythefutureblogs.com/wp-content/uploads/2010/12/brooklyntechlogo.gif" class = "logo2" width = "200px">-->
 <style>
-h1{
-	text-align:center;
-	font-family: 'Montserrat', sans-serif !important;
+	@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
 
+body{
+	overflow-y:hidden;
+}
+.container{
+	display:flex;
 }
 
-.sample1{
-	text-align: center;
+.box{
+	background-color:#7FDBFF;
+	margin-right:10px;
+	height:97vh;
+	box-shadow: 5px 5px 7px gray;
 }
 
-.insert {
-  display: inline-block;
+.item1{
+	background-color:#00BCD4;
+	background-image:url(https://i.imgur.com/Aws1Fer.png);
+	background-position:center center;
+	background-size:100%;
+	background-repeat:no-repeat;
+	width:50%;
+	transition: 0.3s ease all;
 }
 
-.log{
-	background-color:lightblue;
-	display: inline-block;
-	padding:90px;
-  vertical-align: middle;
-
+.item2{
+	background-color:#EF5350;
+	width:50%;
+	padding-left:5%;
+	padding-right:5%;
+	padding-top:5%;
+	box-sizing: border-box;    
+	position:relative;
+	transition: 0.3s ease all;
 }
 
-.logo{
-  display: block;
-  margin: 0 auto;
+.item1:hover{
+	background-color:#0097A7;
+	transition: 0.3s ease all;
 }
 
-.logo2{
-position:relative;
-left:50px;
+.item2:hover{
+	background-color:#D32F2F;
+	transition: 0.3s ease all;
 }
 
-.checkbutton{
-	/**display:none !important;**/
-}</style>
+.slick-prev:before, .slick-next:before{
+  color: whitesmoke;
+	font-size: 60px;
+  margin-top: auto;
+	align-self: flex-end;
+	transition: 0.3s ease all;	
+}
+
+.slide-content{
+	font-size:40px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.slick-carousel {
+  position: static;
+}
+
+.slick-prev,
+.slick-next {
+  transform: none;
+  top: inherit;
+  bottom: 60px;
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-next {
+  right: 60px;
+}
+</style>
 <script>
-$(function() {
-	    $(".checkbutton").hide();
-
-});
-
-$("#sample1").keyup(function (e) {
-	var s_id = $('#sample1').val();
-
-    if (e.keyCode == 13 || s_id=="BillyTheBoss") {
- $(document.getElementById("heading")).html($(document.getElementById("heading")).html().replace("Rescuer","Are you Billy?"));
-
-			$(".log").css({"background-color" :"lightgreen","transition":"0.3s ease"});
-
-	    $(".checkbutton").show().fadeIn("slow");
-
-
-    }
-});
-
-$(".checkbutton").click(function(){
- $(document.getElementById("heading")).html($(document.getElementById("heading")).html().replace("Are you Billy?","Loading Rescuer..."));
-   window.open('http://refath.github.io/Rescuer/rescuer.html');   
-
-
-});
+	$().ready(function(){
+  $('.slick-carousel').slick({
+    arrows: true,
+    centerPadding: "0px",
+    slidesToShow: 1,
+    infinite: true
+  });
+	});
 </script>
