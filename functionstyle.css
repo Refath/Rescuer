@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+f@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
 
 html{
 	height:100%;
@@ -220,7 +220,7 @@ body>div{
 
 .callBackground{
 	background: url('https://cdn2.iconfinder.com/data/icons/basics-1/100/Call-512.png'), #00B000;
-	background-size: 80% 80%;
+	background-size: 90% 80%;
 	background-repeat: no-repeat;
 	background-position: center center;
 
