@@ -5,110 +5,342 @@ html{
 }
 
 body{
-	overflow-y:hidden;
+	overflow:hidden;
+	padding: 2px;
 }
 .container{
-	display:flex;
+	//display:flex;
+}
+
+body>div{
+	transform: scale(1);
+	//position: absolute;
+  //left: 50%;
+  //top: 50%;
+  transform: translate(3%, 2%);
+	transition: 0.3s ease all;
 }
 
 .box{
 	background-color:#7FDBFF;
-	margin-right:10px;
-	height:97vh;
+	//margin-right:10px;
+	//height:100vh;
 	box-shadow: 5px 5px 7px gray;
 }
 
-.item1{
+.item1,.item3{
 	background-color:#00BCD4;
-	background-image:url(https://i.ibb.co/M9C94Gf/Aws1Fer.png);
 	background-position:center center;
 	background-size:100%;
 	background-repeat:no-repeat;
 	width:50%;
-	border-radius: 20px 0 0 20px;
+	height: 45vh;
+	border-radius: 20px 0 0 0px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	transition: 0.3s ease all;
+}
+
+.item2,.item4{
+	display: flex;
+	width: 50%;
+	flex-direction: column;
+  background-color:#EF5350;
+	box-sizing: border-box;    
+	height: 45vh;
+	border-radius: 0 20px 0px 0;
 	transition: 0.3s ease all;
 }
 
 .item2{
-	display: flex;
-	flex-direction: column;
-  background-color:#EF5350;
-	width:50%;
-	padding-left:5%;
-	padding-right:5%;
-	padding-top:5%;
-	box-sizing: border-box;    
-	position:relative;
-	border-radius: 0 20px 20px 0;
-	transition: 0.3s ease all;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
 }
 
-.item1:hover{
+.location{
+	position: relative; 
+	top: -30%;
+}
+
+.item1:hover,.item3:hover{
 	background-color:#0097A7;
 	transform: scale(0.97);
 	transition: 0.3s ease all;
 }
 
-.item2:hover{
+.item2:hover,.item4:hover{
 	background-color:#D32F2F;
 	transform: scale(0.97);
 	transition: 0.3s ease all;
 }
 
-.slick-prev:before, .slick-next:before{
-  color: whitesmoke;
-	font-size: 60px;
-  margin-top: auto;
-	align-self: flex-end;
-	transition: 0.3s ease all;	
+.item3{
+	//position: absolute;
+	//bottom: 10px;
+	//float: right;
+	border-radius: 0 0 0 20px;
+	margin-bottom: 20px;
 }
 
-.slide-content{
-	font-size:40px;
+.item4{
+	border-radius: 0 0 20px 0;
+}
+
+.container {
+  min-height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+	position: relative;
+	//clip-path: circle(10% at 50% 50%);
+
+}
+.container > div {
+  display: flex; 
+  flex-basis: calc(50% - 40px);  
+  justify-content: center;
+  flex-direction: column;
+}
+.container > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.mainCircle{
+	width: 30%;
+	height: 45%;
+	position: absolute;
+	top: 26.5%;
+	left: 31.5%;
+	background: url("https://i.ibb.co/M9C94Gf/Aws1Fer.png") no-repeat, linear-gradient(to left, #283c86 , #45a247);
+	background-position: 140% 130%; 
+	background-size: 110% 110%;
+	clip-path: circle(44% at 50% 50%);
+	transition: 0.3s ease all;
+}
+
+.mainCircle:hover{
+	transform: scale(1.1);
+	opacity: 0.85;
+	transition: 0.3s ease all;
+	cursor: pointer;
+}
+
+.mainCircle:active{
+	opacity: 1;
+	transform: scale(0.9);
+	transition: 0.3s ease all;
+}
+
+/** BEGIN **/
+
+.subOne,
+.subTwo,
+.subThree,
+.subFour {
+  height: 170px;
+  width: 170px;
+  border-radius: 100px;
+  box-shadow: 4px 3px 10px black;
+	transition: 0.3s ease all;
+}
+
+.subOne {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url("https://www.levelaccess.com/wp-content/uploads/2017/11/CVAA-02-298x300.png");
+	background-size: 95% 95%;
+	background-position: center center; 
+	opacity: 1;
+	transition: 0.3s ease all;
+}
+
+.subTwo {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+	background-image: url("https://bocarecoverycenter.com/wp-content/uploads/2016/07/Pain_Killer_Addiction_Rehab.png");
+	background-size: 100% 100%;
+	background-position: center center;
+	transition: 0.3s ease all;
+
+}
+.subThree {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	background-image: url("https://www.humankind.org/wp-content/uploads/2018/08/ems-icon-doing-cpr-e1534816990562.png");
+	display: visible;
+	background-size: 100% 100%;
+	background-position: center center;
+	transition: 0.3s ease all;
+
+}
+.subFour {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+	background-image: url("https://image.flaticon.com/icons/svg/9/9895.svg");
+	background-size: 100% 100%;
+	background-position: center center;
+	transition: 0.3s ease all;
+}
+
+.activeOne{
+	top:20%;
+	left: 20%;
+	opacity: 1;
+  transition: 0.4s ease all;
+}
+
+.activeTwo{
+	top:50%;	
+	left: 70%;
+	transition: 0.4s ease all;
+}
+
+.activeThree{
+	left: 20%;
+	top: 75%;
+	transition: 0.4s ease all;
+}
+
+.activeFour{
+	right:30%;
+	top:20%;
+	transition: 0.4s ease all;
+}
+
+.callBackground{
+	background: url('https://cdn2.iconfinder.com/data/icons/basics-1/100/Call-512.png'), #00B000;
+	background-size: 80% 80%;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+}
+
+.callBackground:hover{
+	background-image: url(https://www.falconemergency.com/wp-content/themes/falcon/images/call3.gif);
+	background-size: 110% 110%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: white;
+	border: 2px greenyellow solid;	
+}
+
+.locHeader{
+	position: relative; 
+	top: -30%;
+}
+
+.mainCircleCall{
+	background-image: url(https://www.falconemergency.com/wp-content/themes/falcon/images/call3.gif);
+	background-size: 120% 120%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: white;
+	border: 2px greenyellow solid;
+	position: absolute;
+	z-index: 1;
+}
+
+.downBackground{
+	background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmhE2xQpAQ5Zui-0KXRIzEiEvlqjt_ZoojTb9P5d7TU80PP4GHqw');
+	animation: MoveUpDown 1s linear infinite;
+	position: absolute;
+	left: 0;
+	right:-100%; 
+	left:-100%; 
+	top:100%;
+  margin:auto;
+}
+
+.hangUpBackground{
+	background-image: url(https://png.pngtree.com/svg/20170310/ab2d1aa29d.svg);
+	background-size: 80% 80%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.hangUpBackground:hover{
+	background-image: url(https://i.pinimg.com/originals/dd/eb/db/ddebdb230c1193f2593cae1140b24e49.gif);
+	background-size: 140% 140%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.subThreeHangUp{
+	background-image: url(https://i.pinimg.com/originals/dd/eb/db/ddebdb230c1193f2593cae1140b24e49.gif);
+	background-size: 100% 140%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.mainCircle:not(.shadow):hover {
+  box-shadow: 4px 3px 5px black;
+	cursor: pointer; 
+	opacity: 0.8;
+  transition: 0.3s ease all;
+}
+
+.unify{
+	margin-right:0;
+	margin-left: 5px;
+	background-color:#EF5350;
+	transition: 0.4s ease all;
+}
+
+.address{
+	position: relative;
+	left: 25%;
+}
+
+.dark{
+	background-color: blue;
+}
+
+.newHangUpLocation{
+	top:20%;
+	left:70%;
+	background-color: blueviolet;
+}
+
+.location{
+	width:99%;
+	//height:100px;
+	border: 2px black solid;
+	position: relative; 
+	top: -30%;
+}
+
+h1{
 	font-family: 'Montserrat', sans-serif;
 }
 
-.slick-carousel {
-  position: static;
+iframe{
+	position: absolute;
+	left:0.6%;
+	top:49.3%;
+	width:91.3%;
+	height: 48%;
+	//z-index: -1;
 }
 
-.slick-prev,
-.slick-next {
-  transform: none;
-  top: inherit;
-  bottom: 60px;
+.subThreeAndFour, .subThree, .subFour{
+	//z-index: -2;
 }
 
-.slick-prev {
-  left: 20px;
+p{
+	font-family: 'Montserrat', sans-serif;
 }
 
-.slick-next {
-  right: 60px;
-}
-
-.abcRioButton{ 
-	margin: 0 auto;
-}
-
-.profileImage{
-	width: 300px;
-	border-radius: 50%;
-	background-image: url('https://www.merriam-webster.com/assets/mw/images/article/art-wap-article-main/egg-3442-e1f6463624338504cd021bf23aef8441@1x.jpg');
-	background-position: center center;		 
-	background-size: cover;
-	background-repeat: no-repeat;
-	margin: 0 auto;
-	transition: 0.3s ease all;	
-}
-
-.profileImage:hover{
-	background-image:url("https://cdn2.iconfinder.com/data/icons/web-and-ui-3/20/145-512.png") !important;
-	transition: 0.3s ease all;	
-}
-
-.toast {
-    position: relative;
-		left: -20px;
-		top: 10px;
+select{
+	visibility: hidden;
 }
