@@ -96,13 +96,13 @@ body>div{
 	//clip-path: circle(10% at 50% 50%);
 
 }
-.container > div {
+.container div {
   display: flex; 
   flex-basis: calc(50% - 40px);  
   justify-content: center;
   flex-direction: column;
 }
-.container > div > div {
+.container div div {
   display: flex;
   justify-content: center;
   flex-direction: row;
